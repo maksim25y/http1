@@ -1,9 +1,12 @@
 package util;
 
+import lombok.Value;
+import lombok.experimental.UtilityClass;
+
 import java.io.IOException;
 import java.util.Properties;
-
-public final class PropertiesUtil {
+@UtilityClass
+public class PropertiesUtil {
 
     private static final Properties PROPERTIES = new Properties();
 
@@ -17,9 +20,6 @@ public final class PropertiesUtil {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    private PropertiesUtil() {
     }
 
     public static String get(String key) {
