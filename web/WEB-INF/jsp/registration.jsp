@@ -5,6 +5,7 @@
     <title>Registration</title>
 </head>
 <body>
+    <img width="300" src="${pageContext.request.contextPath}/images/users/boing777.jpg" alt="User img">
     <form action="${pageContext.request.contextPath}/registration" method="post" enctype="multipart/form-data">
         <label for="nameId">Name:
             <input type="text" name="name" id="nameId">
