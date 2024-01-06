@@ -2,7 +2,7 @@ package entity;
 
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 public class User {
     Integer id;
     String name;
-    LocalDateTime birthday;
+    LocalDate birthday;
     String email;
     String password;
     Role role;
