@@ -5,12 +5,15 @@
     <title>Registration</title>
 </head>
 <body>
-    <form action="${pageContext.request.contextPath}/registration" method="post">
+    <form action="${pageContext.request.contextPath}/registration" method="post" enctype="multipart/form-data">
         <label for="nameId">Name:
             <input type="text" name="name" id="nameId">
         </label><br>
         <label for="birthdayId">Birthday:
-            <input type="date" name="birthday" id="birthdayId">
+            <input type="date" name="birthday" id="birthdayId" required>
+        </label><br>
+        <label for="imageId">Image:
+            <input type="file" name="image" id="imageId" required>
         </label><br>
         <label for="emailId">Email:
             <input type="text" name="email" id="emailId">
@@ -29,6 +32,14 @@
             <br>
         </c:forEach>
         <button type="submit">Send</button>
+        <c:if test="${not empty requestScope.errors}">
+            <div style="color: red">
+                <c:forEach var="error" items="${requestScope.errors}">
+                    <span>${error.message}</span>
+                    <br>
+                </c:forEach>
+            </div>
+        </c:if>
     </form>
 </body>
 </html>

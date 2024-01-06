@@ -5,6 +5,7 @@ import dto.CreateUserDto;
 import exception.ValidationException;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import lombok.SneakyThrows;
 import mapper.CreateUserMapper;
 import validator.CreateUserValidator;
 
@@ -16,6 +17,8 @@ public class UserService {
     private final CreateUserValidator createUserValidator = CreateUserValidator.getInstance();
     private final UserDao userDao = UserDao.getInstance();
     private final CreateUserMapper createUserMapper = CreateUserMapper.getInstance();
+    private final ImageService imageService = ImageService.getInstance();
+    @SneakyThrows
     public Integer create(CreateUserDto userDto){
         //validation
         var validationResult = createUserValidator.isValid(userDto);
@@ -25,6 +28,7 @@ public class UserService {
         //map
         var userEntity = createUserMapper.mapFrom(userDto);
         //userDao.save
+        imageService.upload(userEntity.getImage(),userDto.getImage().getInputStream());
         userDao.save(userEntity);
         //return id
         return userEntity.getId();

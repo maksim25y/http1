@@ -9,11 +9,12 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class User {
-    Integer id;
-    String name;
-    LocalDate birthday;
-    String email;
-    String password;
-    Role role;
-    Gender gender;
+    private Integer id;
+    private String name;
+    private String image;
+    private LocalDate birthday;
+    private String email;
+    private String password;
+    private Role role;
+    private Gender gender;
 }
