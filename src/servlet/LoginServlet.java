@@ -9,10 +9,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
 import service.UserService;
 import util.JspHelper;
+import util.UrlPath;
 
 import java.io.IOException;
 
-@WebServlet("/login")
+@WebServlet(UrlPath.LOGIN)
 public class LoginServlet extends HttpServlet {
 
     private final UserService userService = UserService.getInstance();
