@@ -18,32 +18,34 @@ import static lombok.AccessLevel.PRIVATE;
 
 @NoArgsConstructor(access = PRIVATE)
 public class UserService {
+
     private static final UserService INSTANCE = new UserService();
+
     private final CreateUserValidator createUserValidator = CreateUserValidator.getInstance();
     private final UserDao userDao = UserDao.getInstance();
     private final CreateUserMapper createUserMapper = CreateUserMapper.getInstance();
-    public  final UserMapper userMapper = UserMapper.getInstance();
+    private final UserMapper userMapper = UserMapper.getInstance();
     private final ImageService imageService = ImageService.getInstance();
-    public Optional<UserDto>login(String email,String password){
-        return userDao.findByEmailAndPassword(email,password)
+
+    public Optional<UserDto> login(String email, String password) {
+        return userDao.findByEmailAndPassword(email, password)
                 .map(userMapper::mapFrom);
     }
+
     @SneakyThrows
-    public Integer create(CreateUserDto userDto){
-        //validation
+    public Integer create(CreateUserDto userDto) {
         var validationResult = createUserValidator.isValid(userDto);
-        if(!validationResult.isValid()){
+        if (!validationResult.isValid()) {
             throw new ValidationException(validationResult.getErrors());
         }
-        //map
         var userEntity = createUserMapper.mapFrom(userDto);
-        //userDao.save
-        imageService.upload(userEntity.getImage(),userDto.getImage().getInputStream());
+        imageService.upload(userEntity.getImage(), userDto.getImage().getInputStream());
         userDao.save(userEntity);
-        //return id
+
         return userEntity.getId();
     }
-    public static UserService getInstance(){
+
+    public static UserService getInstance() {
         return INSTANCE;
     }
 }

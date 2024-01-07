@@ -60,7 +60,7 @@ public class UserDao implements Dao<Integer, User>{
         return User.builder()
                 .id(resultSet.getObject("id", Integer.class))
                 .name(resultSet.getObject("name", String.class))
-                .birthday(resultSet.getObject("bitrhday", Date.class).toLocalDate())
+                .birthday(resultSet.getObject("birthday", Date.class).toLocalDate())
                 .image(resultSet.getObject("image", String.class))
                 .email(resultSet.getObject("email", String.class))
                 .password(resultSet.getObject("password", String.class))
