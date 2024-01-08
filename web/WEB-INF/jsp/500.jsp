@@ -9,8 +9,13 @@
 <html>
 <head>
     <title>Title</title>
+    <%@include file="bootstrap.jsp"%>
 </head>
 <body>
-    <h1>Error 500</h1>
+<%@include file="header.jsp"%>
+    <div class="container">
+        <h1>Error 500</h1>
+    </div>
+<%@include file="footer.jsp"%>
 </body>
 </html>

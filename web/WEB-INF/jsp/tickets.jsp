@@ -7,9 +7,14 @@
 <html>
 <head>
     <title>Title</title>
+    <%@include file="bootstrap.jsp"%>
 </head>
 <body>
+<div class="container">
+
+</div>
 <%@include file="header.jsp"%>
+<div class="container">
     <c:if test="${not empty requestScope.tickets}">
         <h1><fmt:message key="page.tickets.purchased"/>:</h1>
         <ul>
@@ -19,5 +24,7 @@
             </c:forEach>
         </ul>
     </c:if>
+</div>
+<%@include file="footer.jsp"%>
 </body>
 </html>

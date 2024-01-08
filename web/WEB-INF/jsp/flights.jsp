@@ -6,19 +6,23 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Flights</title>
+    <%@include file="bootstrap.jsp"%>
 </head>
 <body>
 <%@include file="header.jsp"%>
-<c:if test="${not empty requestScope.flights}">
-    <h1><fmt:message key="page.flights.list"/>:</h1>
-    <ul>
-        <c:forEach var="flight" items="${requestScope.flights}">
-            <li>
-                <a href="${pageContext.request.contextPath}/tickets?flightId=${flight.id}">${flight.description}</a>
-            </li>
-        </c:forEach>
-    </ul>
-</c:if>
+<div class="container">
+    <c:if test="${not empty requestScope.flights}">
+        <h1><fmt:message key="page.flights.list"/>:</h1>
+        <ul>
+            <c:forEach var="flight" items="${requestScope.flights}">
+                <li>
+                    <a href="${pageContext.request.contextPath}/tickets?flightId=${flight.id}">${flight.description}</a>
+                </li>
+            </c:forEach>
+        </ul>
+    </c:if>
+</div>
+<%@include file="footer.jsp"%>
 </body>
 </html>
