@@ -9,7 +9,9 @@ import util.UrlPath;
 
 import java.io.IOException;
 
-@WebServlet("/locale")
+import static util.UrlPath.LOCALE;
+
+@WebServlet(LOCALE)
 public class LocaleServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
