@@ -16,7 +16,7 @@ import static util.UrlPath.*;
 @WebFilter("/*")
 public class AuthorizationFilter implements Filter {
 
-    private static final Set<String> PUBLIC_PATH = Set.of(LOGIN, REGISTRATION, IMAGES,ROOT);
+    private static final Set<String> PUBLIC_PATH = Set.of(LOGIN, REGISTRATION, IMAGES);
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -34,7 +34,7 @@ public class AuthorizationFilter implements Filter {
     }
 
     private boolean isPublicPath(String uri) {
-        return PUBLIC_PATH.stream().anyMatch(uri::startsWith);
+        return PUBLIC_PATH.stream().anyMatch(uri::startsWith) || uri.equals("/");
     }
 
     private void reject(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {

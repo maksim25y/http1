@@ -24,6 +24,7 @@ public class UserDao implements Dao<Integer, User>{
         return INSTANCE;
     }
     private static final String SAVE ="INSERT INTO users(name, birthday, email, password, role, gender,image) VALUES(?,?,?,?,?,?,?)";
+    public static final String CHANGE_PASSWORD_SQL = "UPDATE users SET password=? WHERE id=?;";
     public static final String GET_BY_EMAIL_AND_PASSWORD_SQL ="SELECT * FROM users WHERE email=? AND password=?";
     @Override
     public List<User> findAll() {
@@ -86,6 +87,15 @@ public class UserDao implements Dao<Integer, User>{
             generatedKeys.next();
             entity.setId(generatedKeys.getObject("id",Integer.class));
             return entity;
+        }
+    }
+    @SneakyThrows
+    public void changePassword(Integer id,String password) {
+        var connection = ConnectionManager.get();
+        try (var preparedStatement = connection.prepareStatement(CHANGE_PASSWORD_SQL)) {
+            preparedStatement.setInt(2,id);
+            preparedStatement.setString(1,password);
+            preparedStatement.executeUpdate();
         }
     }
 }

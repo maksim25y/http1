@@ -70,6 +70,17 @@
                         </a>
                     </c:if>
                 </li>
+                <%----%>
+                <li>
+                    <c:if test="${not empty sessionScope.user}">
+                        <a href="${pageContext.request.contextPath}/edit">
+                            <button type="button" class="btn btn-warning me-2">
+                                <fmt:message key="page.header.edit"/>
+                            </button>
+                        </a>
+                    </c:if>
+                </li>
+<%--                /--%>
                 <li>
                     <c:if test="${empty sessionScope.user}">
                         <a href="${pageContext.request.contextPath}/registration">

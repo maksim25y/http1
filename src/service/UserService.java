@@ -48,4 +48,8 @@ public class UserService {
     public static UserService getInstance() {
         return INSTANCE;
     }
+
+    public void changePassword(Integer id,String password) {
+        userDao.changePassword(id,password);
+    }
 }

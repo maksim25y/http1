@@ -106,14 +106,6 @@
                         </c:forEach>
                 </div>
                 <button class="btn btn-primary w-100 py-2 mt-2" type="submit"><fmt:message key="page.registration.send"/> </button>
-                <c:if test="${not empty requestScope.errors}">
-                    <div style="color: red">
-                        <c:forEach var="error" items="${requestScope.errors}">
-                            <span>${error.message}</span>
-                            <br>
-                        </c:forEach>
-                    </div>
-                </c:if>
             </form>
         </main>
     </div>
