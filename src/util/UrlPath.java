@@ -18,5 +18,4 @@ public class UrlPath {
     public static final String DOWNLOAD = "/download";
     public static final String LOCALE ="/locale";
     public static final String EDIT ="/edit";
-
 }

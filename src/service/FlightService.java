@@ -30,4 +30,14 @@ public class FlightService {
     public static FlightService getInstance() {
         return INSTANCE;
     }
+
+    public List<FlightDto> getAllFlightsFromTo(String from, String to) {
+        return flightDao.findAllWhereFromAndTo(from,to).stream()
+                .map(flight -> FlightDto.builder()
+                        .id(flight.getId())
+                        .description("""
+                            %s - %s - %s
+                        """.formatted(flight.getDepartureAirportCode(), flight.getArrivalAirportCode(), flight.getStatus())).build())
+                .collect(toList());
+    }
 }

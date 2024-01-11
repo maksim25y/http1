@@ -17,6 +17,7 @@ public class FlightDao implements Dao<Long, Flight> {
     private static final FlightDao INSTANCE = new FlightDao();
 
     private static final String FIND_ALL = "SELECT * FROM flight";
+    private static final String FIND_ALL_BY_FROM_TO = "SELECT * FROM flight WHERE departure_airport_code=? AND arrival_airport_code=?;";
 
     private FlightDao() {
     }
@@ -30,7 +31,6 @@ public class FlightDao implements Dao<Long, Flight> {
             while (resultSet.next()) {
                 flights.add(buildFlight(resultSet));
             }
-
             return flights;
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -72,5 +72,21 @@ public class FlightDao implements Dao<Long, Flight> {
                 resultSet.getObject("aircraft_id", Integer.class),
                 FlightStatus.valueOf(resultSet.getObject("status", String.class))
         );
+    }
+
+    public List<Flight> findAllWhereFromAndTo(String from, String to) {
+        try (var connection = ConnectionManager.get();
+             var preparedStatement = connection.prepareStatement(FIND_ALL_BY_FROM_TO)) {
+            preparedStatement.setString(1,from);
+            preparedStatement.setString(2,to);
+            var resultSet = preparedStatement.executeQuery();
+            List<Flight> flights = new ArrayList<>();
+            while (resultSet.next()) {
+                flights.add(buildFlight(resultSet));
+            }
+            return flights;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
