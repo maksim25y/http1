@@ -11,7 +11,6 @@ import util.FlightVariants;
 import util.JspHelper;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 @WebServlet("/flights")
 public class FlightServlet extends HttpServlet {
