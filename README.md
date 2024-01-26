@@ -20,6 +20,8 @@
 ![image](https://github.com/maksim25y/http1/assets/131711956/b2cfe2a9-d6fd-4528-be85-f56ebff4a230)
 Фильтр по следуюшим параметрам (LDN-BSL):
 ![image](https://github.com/maksim25y/http1/assets/131711956/e08b0f93-fb13-4c69-81bf-2871c9134112)
+В случае ввода некорректных данных от пользователя или отсутсвии рейсов по заданным параметрам будет выведено соответствующее сообщение:
+![image](https://github.com/maksim25y/http1/assets/131711956/953dcb55-a476-43c2-971e-c735509f2550)
 
 
 
