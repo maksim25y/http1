@@ -32,6 +32,14 @@
 
 Происходит переход на страницу /tickets?flightId=(id перелета).
 
+Для смены пароля необходимо нажать на кнопку в хэдере:
+![image](https://github.com/maksim25y/http1/assets/131711956/ca7d00da-2ce8-42e7-a811-84ad25ed41f9)
+
+Необходимо ввести новый пароль, который будет сохранен в БД:
+![image](https://github.com/maksim25y/http1/assets/131711956/ceaef347-23e6-4431-85bd-82a5c1241013)
+
+
+
 
 
 
