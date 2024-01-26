@@ -48,7 +48,8 @@
 <details><summary>Реализация</summary>
 При работе над данным проектом мною был использованы следующий технологии: PostgreSQL, ApacheTomcat, JDBС, HttpServlets, Maven, JUNIT5.
 База данных:
-![image](https://github.com/maksim25y/http1/assets/131711956/8ae3a80f-7f8e-414a-a1ee-c568e195d522)
+  
+![image](https://github.com/maksim25y/http1/assets/131711956/e10d065f-6ccf-455c-92f8-0a5315de7f66)
 
 </details>
 
