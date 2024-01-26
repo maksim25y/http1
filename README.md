@@ -1,5 +1,5 @@
 Данный проект я выполнял при изучении HTTP, представляет из себя веб-приложение.
-<details><summary>A dropdown list for markdown</summary>
+<details><summary>Функционал</summary>
 
 Регистрация
 ![image](https://github.com/maksim25y/http1/assets/131711956/5f6e4a11-9820-4e6b-8655-e0db957fd9bc)
