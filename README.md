@@ -29,6 +29,7 @@
 При нажатии на любой из перелетов будет доступна информация о билетах, купленных на данный рейс:
 ![image](https://github.com/maksim25y/http1/assets/131711956/c83ddb46-a498-4cd8-8b7e-75104bfe2ac4)
 ![image](https://github.com/maksim25y/http1/assets/131711956/285b79db-3628-4227-8020-1b5fcdf8d0ad)
+
 Происходит переход на страницу /tickets?flightId=(id перелета).
 
 
