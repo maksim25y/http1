@@ -43,7 +43,7 @@
 Для этого необходимо в хэдере выбрать нужный язык:
 ![image](https://github.com/maksim25y/http1/assets/131711956/594a6354-15c5-4b11-addf-45acdca84ba1)
 
-![image](https://github.com/maksim25y/http1/assets/131711956/a191d394-4b09-40e0-bc08-5d1603950821)
+![image](https://github.com/maksim25y/http1/assets/131711956/246c1ecb-2878-45b7-88b8-1d860785e26a)
 
 
 
