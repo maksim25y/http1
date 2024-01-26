@@ -44,6 +44,10 @@
 ![image](https://github.com/maksim25y/http1/assets/131711956/61baa966-90b5-4efe-8132-49d78863e36c)
 
 ![image](https://github.com/maksim25y/http1/assets/131711956/5291450f-ad24-43bc-9722-c8fcfc849657)
+</details>
+<details><summary>Реализация</summary>
+
+</details>
 
 
 
