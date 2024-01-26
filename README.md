@@ -55,7 +55,8 @@
 </details>
 
 <details><summary>Установка и запуск</summary>
-Для того, чтобы проделать следующие шаги на Windows, установите [Git Bash](https://gitforwindows.org/) и [intellij Idea Ultimate](https://gitforwindows.org/](https://www.jetbrains.com/idea/)
+Для того, чтобы проделать следующие шаги на Windows, установите [Git Bash](https://gitforwindows.org/)
+
 
 1. Склонируйте репозиторий
 ```shell
