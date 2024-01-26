@@ -54,6 +54,20 @@
 
 </details>
 
+<details><summary>Установка и запуск</summary>
+Для того, чтобы проделать следующие шаги на Windows, установите [Git Bash](https://gitforwindows.org/) и [intellij Idea Ultimate](https://gitforwindows.org/](https://www.jetbrains.com/idea/)
+
+1. Склонируйте репозиторий
+```shell
+git clone https://github.com/F0RRZZ/BrainStorm.git
+```
+2. Создайте и активируйте venv
+
+```shell
+cd BrainStorm
+```
+</details>
+
 
 
 
