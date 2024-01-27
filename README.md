@@ -60,12 +60,7 @@
 
 1. Склонируйте репозиторий
 ```shell
-git clone https://github.com/F0RRZZ/BrainStorm.git
-```
-2. Создайте и активируйте venv
-
-```shell
-cd BrainStorm
+git clone git@github.com:maksim25y/http1.git
 ```
 </details>
 
